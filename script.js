@@ -62,6 +62,12 @@ function moveTask(id, direction) {
     renderTasks();
 }
 
+  function deleteTask(id) {
+    if (!confirm("¿Seguro que deseas eliminar esta tarea?")) return;
+    tasks = tasks.filter(t => t.id !== id);
+    renderTasks();
+  }
+
 function deleteTask(id) {
     tasks = tasks.filter(t => t.id !== id);
     renderTasks();
